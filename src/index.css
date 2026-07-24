@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-marker: "Caveat", cursive;
+  --font-serif: "EB Garamond", serif;
+  --font-hand1: "Give You Glory", cursive;
+  --font-hand2: "Patrick Hand", cursive;
+
+  /* Dynamically map all emerald (primary theme color) references to our active theme CSS variables */
+  --color-emerald-200: var(--theme-accent);
+  --color-emerald-300: var(--theme-accent);
+  --color-emerald-400: var(--theme-accent);
+  --color-emerald-500: var(--theme-accent);
+  --color-emerald-600: var(--theme-accent);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .font-marker { font-family: var(--font-marker); }
+  .font-serif-app { font-family: var(--font-serif); }
+  .font-hand1 { font-family: var(--font-hand1); }
+  .font-hand2 { font-family: var(--font-hand2); }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
