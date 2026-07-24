@@ -1,4 +1,4 @@
-# Headspace (Ambient Board)
+# Headspace
 
 This is a completely transparent, frameless desktop whiteboard and task overlay. It pins itself directly to the desktop wallpaper layer so it stays out of the way of your regular apps and doesn't clutter up the Cmd+Tab switcher.
 
