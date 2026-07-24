@@ -23,3 +23,24 @@ To compile the actual release binary (no localhost or DevTools):
 ```bash
 npm run tauri build
 ```
+
+## Installation & Troubleshooting
+
+Because this is a powerful open-source app and is not cryptographically signed by a paid Apple/Microsoft developer account, your operating system will try to block it from running the first time you download it.
+
+Here is how to safely bypass the security blocks:
+
+### Mac (Apple Silicon & Intel)
+When you download the `.app` file, macOS Gatekeeper will falsely claim the app is "damaged and should be moved to trash" because it is unsigned.
+1. Move the `Headspace.app` file into your Mac's **Applications** folder.
+2. Open your Mac's **Terminal**.
+3. Copy and paste this exact command to remove Apple's quarantine flag:
+   ```bash
+   xattr -cr /Applications/Headspace.app
+   ```
+4. Double-click the app in your Applications folder and it will launch perfectly.
+
+### Windows
+When you run the `.exe` or `.msi` installer, Windows SmartScreen will pop up a blue box saying "Windows protected your PC".
+1. Click **More info** on the blue popup.
+2. Click **Run anyway**.
