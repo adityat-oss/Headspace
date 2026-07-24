@@ -197,7 +197,7 @@ pub fn run() {
 
                 #[cfg(debug_assertions)]
                 {
-                    let _ = window.open_devtools();
+
                 }
             }
 
