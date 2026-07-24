@@ -163,6 +163,11 @@ pub fn run() {
         .plugin(tauri_plugin_autostart::init(tauri_plugin_autostart::MacosLauncher::LaunchAgent, Some(vec![])))
         .plugin(tauri_plugin_sql::Builder::default().build())
         .plugin(tauri_plugin_opener::init())
+        .plugin(tauri_plugin_single_instance::init(|app, _args, _cwd| {
+            // When user tries to launch a second instance, show the dashboard
+            crate::window_pinning::enter_active_mode(app);
+            let _ = app.emit("mode-changed", serde_json::json!({ "appMode": "active", "isInteractive": true }));
+        }))
         .on_window_event(|window, event| {
             if window.label() != "main" {
                 return;
