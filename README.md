@@ -3,8 +3,8 @@
 This is a completely transparent, frameless desktop whiteboard and task overlay. It pins itself directly to the desktop wallpaper layer so it stays out of the way of your regular apps and doesn't clutter up the Cmd+Tab switcher.
 
 It basically has two modes:
-- **Regular Mode:** Acts like an NVIDIA overlay. Zero backgrounds, zero pills, zero boxes. Just pure text floating on your screen that you can click right through.
-- **Dashboard Mode:** Press `Cmd + Shift + B` (or `Ctrl + Shift + B` on Windows) to force it into dashboard. This brings up a frosted-glass hub where you can manage your boards, change settings, and actually edit the tasks.
+- **Regular Mode:** Acts like an overlay. Zero backgrounds, zero pills, zero boxes. 
+- **Dashboard Mode:** Press `Cmd + Shift + B` (or `Ctrl + Shift + B` on Windows) to force it into dashboard. This brings up a hub where you can manage your boards, change settings, and make new taskboards.
 
 ### How it Works Under the Hood
 It's built with Tauri 2.0 (Rust) for the backend and React/Tailwind for the UI.
